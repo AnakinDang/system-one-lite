@@ -1,0 +1,26 @@
+[project]
+name = "system-one-lite"
+version = "0.1.0"
+description = "Open reproduction of the public System One decision contract on a synthetic agent tool-routing task."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Weiyu Dang" }]
+dependencies = ["torch"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+system-one-train = "system_one.train:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

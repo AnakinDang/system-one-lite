@@ -1,0 +1,230 @@
+{
+  "seed": 42,
+  "torch": "2.14.1",
+  "device": "cpu",
+  "train_size": 5000,
+  "calibration_size": 1000,
+  "test_size": 1500,
+  "epochs": 8,
+  "d_model": 64,
+  "layers": 2,
+  "majority_tool_accuracy": 0.318,
+  "decision_train_loss": [
+    3.8197910705566405,
+    2.6190967193603516,
+    2.4613067749023436,
+    2.439800650405884,
+    2.426781163406372,
+    2.4130792106628416,
+    2.3941119592666626,
+    2.390435807800293
+  ],
+  "judge_train_loss": [
+    3.113964310455322,
+    2.3246433097839354,
+    2.205272992706299,
+    2.1850723045349123,
+    2.174158533477783,
+    2.1636743412017823,
+    2.148425154876709,
+    2.1469039154052734
+  ],
+  "decision_temperature": {
+    "tool": 1.1,
+    "risk": 1.15,
+    "live": 0.9,
+    "destructive": 1.0
+  },
+  "judge_temperature": {
+    "tool": 1.05,
+    "risk": 1.15,
+    "live": 0.95,
+    "destructive": 1.0
+  },
+  "decision_before_temperature": {
+    "tool": {
+      "accuracy": 0.6859999895095825,
+      "nll": 0.9882798790931702,
+      "brier": 0.47222161293029785,
+      "ece": 0.04760131239891052
+    },
+    "needs_live_data": {
+      "accuracy": 0.8606666922569275,
+      "nll": 0.3559682071208954,
+      "brier": 0.10753262042999268,
+      "ece": 0.0148150734603405
+    },
+    "is_destructive": {
+      "accuracy": 0.9319999814033508,
+      "nll": 0.23164494335651398,
+      "brier": 0.06139212101697922,
+      "ece": 0.013486403971910477
+    },
+    "risk": {
+      "accuracy": 0.7400000095367432,
+      "nll": 0.696071207523346,
+      "brier": 0.38173002004623413,
+      "ece": 0.04735768586397171
+    }
+  },
+  "decision_after_temperature": {
+    "tool": {
+      "accuracy": 0.6859999895095825,
+      "nll": 0.9825907349586487,
+      "brier": 0.4703342616558075,
+      "ece": 0.029054824262857437
+    },
+    "needs_live_data": {
+      "accuracy": 0.8606666922569275,
+      "nll": 0.3581332564353943,
+      "brier": 0.1079370453953743,
+      "ece": 0.02079930156469345
+    },
+    "is_destructive": {
+      "accuracy": 0.9319999814033508,
+      "nll": 0.23164494335651398,
+      "brier": 0.06139212101697922,
+      "ece": 0.013486403971910477
+    },
+    "risk": {
+      "accuracy": 0.7400000095367432,
+      "nll": 0.6897335052490234,
+      "brier": 0.3807075321674347,
+      "ece": 0.03875049576163292
+    }
+  },
+  "judge_before_temperature": {
+    "tool": {
+      "accuracy": 0.6866666674613953,
+      "nll": 0.9798916578292847,
+      "brier": 0.4684385657310486,
+      "ece": 0.040778353810310364
+    },
+    "needs_live_data": {
+      "accuracy": 0.859333336353302,
+      "nll": 0.3615296483039856,
+      "brier": 0.2180444300174713,
+      "ece": 0.019757188856601715
+    },
+    "is_destructive": {
+      "accuracy": 0.9319999814033508,
+      "nll": 0.23555049300193787,
+      "brier": 0.1250382661819458,
+      "ece": 0.021824808791279793
+    },
+    "risk": {
+      "accuracy": 0.7353333234786987,
+      "nll": 0.6883273720741272,
+      "brier": 0.38050752878189087,
+      "ece": 0.04935484007000923
+    }
+  },
+  "judge_after_temperature": {
+    "tool": {
+      "accuracy": 0.6866666674613953,
+      "nll": 0.9769656658172607,
+      "brier": 0.4674312472343445,
+      "ece": 0.03868529945611954
+    },
+    "needs_live_data": {
+      "accuracy": 0.859333336353302,
+      "nll": 0.3628668487071991,
+      "brier": 0.21831119060516357,
+      "ece": 0.025471847504377365
+    },
+    "is_destructive": {
+      "accuracy": 0.9319999814033508,
+      "nll": 0.23555049300193787,
+      "brier": 0.1250382661819458,
+      "ece": 0.021824808791279793
+    },
+    "risk": {
+      "accuracy": 0.7353333234786987,
+      "nll": 0.6809314489364624,
+      "brier": 0.37756380438804626,
+      "ece": 0.02104008011519909
+    }
+  },
+  "decision_tool_by_family": {
+    "arithmetic": {
+      "n": 147,
+      "accuracy": 0.8435373902320862
+    },
+    "code_or_calc": {
+      "n": 157,
+      "accuracy": 0.35031846165657043
+    },
+    "debug": {
+      "n": 155,
+      "accuracy": 0.6903225779533386
+    },
+    "done": {
+      "n": 152,
+      "accuracy": 0.7828947305679321
+    },
+    "external_write": {
+      "n": 154,
+      "accuracy": 0.5584415793418884
+    },
+    "live_fact": {
+      "n": 147,
+      "accuracy": 0.7551020383834839
+    },
+    "local_edit": {
+      "n": 135,
+      "accuracy": 0.7851851582527161
+    },
+    "lookup": {
+      "n": 144,
+      "accuracy": 0.8541666865348816
+    },
+    "unclear": {
+      "n": 162,
+      "accuracy": 0.5123456716537476
+    },
+    "write_code": {
+      "n": 147,
+      "accuracy": 0.7823129296302795
+    }
+  },
+  "latency_ms": {
+    "decision": {
+      "n": 200,
+      "p50_ms": 0.35341596230864525,
+      "p95_ms": 0.4480830393731594,
+      "mean_ms": 0.3614022000692785
+    },
+    "judge": {
+      "n": 200,
+      "p50_ms": 0.38758397568017244,
+      "p95_ms": 0.45445910654962063,
+      "mean_ms": 0.3942714026197791
+    }
+  },
+  "cost": {
+    "decision_forward_passes": 1,
+    "decision_output_tokens": 0,
+    "judge_decode_steps": 4,
+    "judge_mean_json_chars": 72.87533333333333
+  },
+  "preview": {
+    "state": "no further action for leo",
+    "label": {
+      "tool": "finish",
+      "needs_live_data": true,
+      "is_destructive": false,
+      "risk": 0
+    },
+    "next_tool": "finish",
+    "tool_confidence": 0.7226972603986576,
+    "needs_live_data": 0.02661898545920849,
+    "is_destructive": 0.011765144765377045,
+    "risk_score": 0.1878003627061844,
+    "risk_confidence": 0.7182994569901398
+  },
+  "scope": {
+    "architecture": "hashed-token transformer encoder, CLS pooling, parallel Choice Score and Noul heads",
+    "objective": "cross-entropy and binary cross-entropy plus 0.25 times Brier score",
+    "not_included": "TypeSafe Jev weights, unpublished architecture, and the unpublished RLCD update"
+  }
+}
